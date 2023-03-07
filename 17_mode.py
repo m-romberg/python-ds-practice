@@ -11,3 +11,10 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+
+    # O(n^2)
+    # Writing out the counter would be O(n)
+    # Also there is a built in function
+    counter = {num: nums.count(num) for num in nums}
+    max_key = max(counter, key=counter.get)
+    return max_key
