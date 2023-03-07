@@ -11,5 +11,6 @@ def single_letter_count(word, letter):
         3
     """
     return word.lower().count(letter)
+    #check the capital h
 
 print(single_letter_count('Hello World', 'h'))

@@ -12,11 +12,9 @@ def weekday_name(day_of_week):
         >>> weekday_name(9)
         >>> weekday_name(0)
     """
+    #can make global variable ex: DAYS_OF_WEEK
     days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     if 1<= day_of_week <= 7:
         return days[day_of_week-1]
-    else:
-        return None
 
-print(weekday_name(3))
 

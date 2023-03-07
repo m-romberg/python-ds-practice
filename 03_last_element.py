@@ -15,7 +15,3 @@ def last_element(lst):
     """
     if lst:
         return lst[-1]
-    else:
-        return None
-nums = [1, 2, 3]
-print(last_element(nums))

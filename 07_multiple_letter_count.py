@@ -8,7 +8,7 @@ def multiple_letter_count(phrase):
         {'Y': 1, 'a': 1, 'y': 1}
     """
     counter = {}
-
+# TODO: practice dictionary comprehension
     for ltr in phrase:
         if ltr not in counter:
             counter[ltr] = 0
