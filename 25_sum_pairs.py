@@ -21,3 +21,19 @@ def sum_pairs(nums, goal):
         >>> sum_pairs([11, 20, 4, 2, 1, 5], 100)
         ()
     """
+    nums_sum_to_goal = {}
+
+    #check for any pairs that sum to goal, storing highest index as key
+    for i in range (0, len(nums)):
+        for j in range (i+1, len(nums)):
+            if nums[i] + nums[j] == goal:
+                nums_sum_to_goal[j] = (nums[i], nums[j])
+    #if object is empty, return blank tuple
+    if not nums_sum_to_goal:
+        return ()
+    #find lowest value key in object (this is the first pair)
+    key = min(nums_sum_to_goal, key = nums_sum_to_goal.get)
+    lowest_pair = nums_sum_to_goal[key]
+
+    return lowest_pair
+
