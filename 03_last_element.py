@@ -4,7 +4,7 @@ def last_element(lst):
         >>> nums = [1, 2, 3]
         >>> last_element(nums)
         3
-        
+
     Make sure original list has not been mutated:
 
         >>> nums == [1, 2, 3]
@@ -13,3 +13,9 @@ def last_element(lst):
         >>> last_element([]) is None
         True
     """
+    if lst:
+        return lst[-1]
+    else:
+        return None
+nums = [1, 2, 3]
+print(last_element(nums))
